@@ -15,7 +15,7 @@ pipeline {
         
         stage('print branch'){
             steps {
-                sh 'echo "reference detected: $ref"'
+                sh 'echo Branch Finded : $ref'
             }
         }
     }
