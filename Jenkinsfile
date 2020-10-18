@@ -28,9 +28,14 @@ pipeline {
             }
         }
         
-        stage('master-branch-stuff'){
+        stage('ssh connection -- prod'){
+
+            when {
+                branch 'refs/heads/main'
+            }
+
             steps {
-                echo 'run this stage - ony if the branch = master branch'
+                echo 'run this stage - ony if the branch = master main'
             }
         }
         
