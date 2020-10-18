@@ -22,11 +22,6 @@ pipeline {
     }
     
     stages {
-        stage('run') {
-            steps {
-                sh 'echo "program is re run update MAJ ONLY IN DEV !!!"'
-            }
-        }
         
         stage('ssh connection -- prod'){
             when {
@@ -38,13 +33,31 @@ pipeline {
             }
         }
         
-        stage('run 2'){
+        stage('clone repository') {
+            steps {
+                sh 'echo "program is re run update MAJ ONLY IN DEV !!!"'
+            }
+        }
+
+        stage('down services'){
+            steps {
+                sh 'echo Hello : `seq 1 10`'
+            }
+        }
+
+        stage('start db'){
             steps {
                 sh 'echo Hello : `seq 1 10`'
             }
         }
         
-        stage('print branch'){
+        stage('build / package services'){
+            steps {
+                sh 'echo Hello : `seq 1 10`'
+            }
+        }
+        
+        stage('start services'){
             steps {
                 sh 'echo Branch Finded : $ref'
             }
