@@ -12,5 +12,11 @@ pipeline {
                 sh 'echo Hello : `seq 1 10`'
             }
         }
+        
+        stage('print ref'){
+            steps {
+                sh 'ref detected: $ref'
+            }
+        }
     }
 }
