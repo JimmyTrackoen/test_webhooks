@@ -23,7 +23,7 @@ pipeline {
     
     stages {
         
-        stage('ssh connection -- prod'){
+        stage('Remote connection'){
             when {
                 branch 'main'
             }
@@ -33,31 +33,31 @@ pipeline {
             }
         }
         
-        stage('clone repository') {
+        stage('Clone repository') {
             steps {
                 sh 'echo "program is re run update MAJ ONLY IN DEV !!!"'
             }
         }
 
-        stage('down services'){
+        stage('Down services'){
             steps {
                 sh 'echo Hello : `seq 1 10`'
             }
         }
 
-        stage('start db'){
+        stage('Start db'){
             steps {
                 sh 'echo Hello : `seq 1 10`'
             }
         }
         
-        stage('build / package services'){
+        stage('Build/Package services'){
             steps {
                 sh 'echo Hello : `seq 1 10`'
             }
         }
         
-        stage('start services'){
+        stage('Start services'){
             steps {
                 sh 'echo Branch Finded : $ref'
             }
