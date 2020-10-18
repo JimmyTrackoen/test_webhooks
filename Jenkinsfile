@@ -35,7 +35,7 @@ pipeline {
         
         stage('Clone repository') {
             steps {
-                sh 'echo "program is re run update MAJ ONLY IN DEV !!!"'
+                sh 'echo "We clone repository :) !!!"'
             }
         }
 
