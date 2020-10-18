@@ -24,7 +24,7 @@ pipeline {
     stages {
         stage('run') {
             steps {
-                sh 'echo "program is re run update MAJ ONLY IN DEV !!"'
+                sh 'echo "program is re run update MAJ ONLY IN DEV !!!"'
             }
         }
         
