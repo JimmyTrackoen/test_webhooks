@@ -30,7 +30,7 @@ pipeline {
         
         stage('ssh connection -- prod'){
             when {
-                branch 'refs/heads/main'
+                branch 'main'
             }
 
             steps {
