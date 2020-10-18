@@ -7,6 +7,16 @@ pipeline {
             }
         }
         
+        stage('master-branch-stuff'){
+            agent any
+            when{
+                branch 'main'
+            }
+            steps {
+                echo 'run this stage - ony if the branch = master branch'
+            }
+        }
+        
         stage('run 2'){
             steps {
                 sh 'echo Hello : `seq 1 10`'
