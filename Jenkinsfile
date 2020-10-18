@@ -23,7 +23,7 @@ pipeline {
     
     stages {
         
-        stage('Remote connection [ only prod ]'){
+        stage('Remote connection [only prod]'){
             when {
                 branch 'main'
             }
