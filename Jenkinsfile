@@ -9,8 +9,8 @@ pipeline {
         
         stage('master-branch-stuff'){
             agent any
-            when{
-                branch 'refs/heads/main'
+            when {
+                expression { $ref ==  'refs/heads/main' }
             }
             steps {
                 echo 'run this stage - ony if the branch = master branch'
