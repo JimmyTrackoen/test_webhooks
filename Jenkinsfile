@@ -29,7 +29,6 @@ pipeline {
         }
         
         stage('ssh connection -- prod'){
-
             when {
                 branch 'refs/heads/main'
             }
