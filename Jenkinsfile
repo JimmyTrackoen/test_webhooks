@@ -35,7 +35,7 @@ pipeline {
         
         stage('Clone repository') {
             steps {
-                sh 'echo "We clone repository :) !!!  `pwd`  $ref "'
+                sh 'echo "We clone repository :) !!!  `pwd`  $ref  $BRANCH_NAME "'
             }
         }
 
